@@ -14,5 +14,6 @@ set matchtime=3
 set hlsearch
 call plug#begin()
 	Plug 'sickill/vim-monokai'
+	Plug 'scrooloose/nerdtree'
 call plug#end()
 
