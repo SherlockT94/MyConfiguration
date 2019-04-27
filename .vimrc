@@ -1,4 +1,5 @@
 set nu
+set rnu
 set ruler
 set cursorline
 syntax enable
