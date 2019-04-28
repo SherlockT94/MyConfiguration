@@ -34,5 +34,6 @@ call plug#begin()
 	Plug 'sickill/vim-monokai'
 	Plug 'scrooloose/nerdtree'
 	Plug 'itchyny/lightline.vim'
+	Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
