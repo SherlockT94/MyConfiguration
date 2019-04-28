@@ -35,5 +35,6 @@ call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'itchyny/lightline.vim'
 	Plug 'scrooloose/nerdcommenter'
+	Plug 'yggdroot/indentline'
 call plug#end()
 
