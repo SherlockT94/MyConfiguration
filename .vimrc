@@ -28,7 +28,7 @@ inoremap { {}<Esc>i
 inoremap < <><Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
-nnoremap <F3> :NERDTree<CR> 
+nmap <Leader>t :NERDTreeToggle<CR>
 " configure the plugins
 call plug#begin()
 	Plug 'sickill/vim-monokai'
