@@ -14,7 +14,6 @@ colorscheme monokai
 set autoindent
 " smartindent base on syntax
 set smartindent
-
 " turn tab to spaces
 set expandtab
 " /t = 4 spaces
@@ -40,6 +39,7 @@ inoremap < <><Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 nmap <Leader>t :NERDTreeToggle<CR>
+inoremap jj <Esc>
 " configure the plugins
 call plug#begin()
     Plug 'sickill/vim-monokai'
