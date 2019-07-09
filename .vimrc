@@ -8,7 +8,8 @@ syntax on
 " set the colorscheme of lightline.vim
 let g:lightline = { 'colorscheme': 'one'}
 " set the colorscheme for vim
-colorscheme monokai
+colorscheme gruvbox
+set background=dark
 
 " autoindent the next line follow the style of current line
 set autoindent
@@ -47,5 +48,6 @@ call plug#begin()
     Plug 'itchyny/lightline.vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'yggdroot/indentline'
+    Plug 'morhetz/gruvbox'
 call plug#end()
 
