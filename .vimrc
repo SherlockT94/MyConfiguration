@@ -10,7 +10,7 @@ let g:lightline = { 'colorscheme': 'one'}
 " set the colorscheme for vim
 colorscheme gruvbox
 set background=dark
-
+set foldmethod=indent
 " autoindent the next line follow the style of current line
 set autoindent
 " smartindent base on syntax
