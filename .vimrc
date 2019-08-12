@@ -49,5 +49,7 @@ call plug#begin()
     Plug 'scrooloose/nerdcommenter'
     Plug 'yggdroot/indentline'
     Plug 'morhetz/gruvbox'
+    Plug 'davidhalter/jedi-vim'
+    Plug 'ervandew/supertab'
 call plug#end()
 
