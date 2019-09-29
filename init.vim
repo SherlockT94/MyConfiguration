@@ -50,6 +50,10 @@ call plug#begin()
     Plug 'scrooloose/nerdtree'
     Plug 'itchyny/lightline.vim'
     Plug 'scrooloose/nerdcommenter'
+    Plug 'godlygeek/tabular'
+    Plug 'tpope/vim-surround'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
     Plug 'shougo/deoplete.nvim'
     Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'roxma/nvim-yarp'
