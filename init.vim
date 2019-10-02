@@ -10,9 +10,10 @@ let g:lightline = { 'colorscheme': 'one'}
 " enbale deoplete
 let g:deoplete#enable_at_startup = 1
 " set the colorscheme for vim
+set termguicolors
 colorscheme gruvbox
 set background=dark
-
+" set fold method
 set foldmethod=indent
 " autoindent the next line follow the style of current line
 set autoindent
@@ -31,7 +32,6 @@ set sm
 set matchtime=3
 set hlsearch
 set laststatus=2
-
 " set the Leader key
 let mapleader = ","
 " key mappings
@@ -46,6 +46,7 @@ nmap <Leader>t :NERDTreeToggle<CR>
 inoremap jj <Esc>
 " configure the plugins
 call plug#begin()
+    Plug 'mhinz/vim-startify'
     Plug 'sickill/vim-monokai'
     Plug 'scrooloose/nerdtree'
     Plug 'itchyny/lightline.vim'
@@ -60,5 +61,21 @@ call plug#begin()
     Plug 'roxma/vim-hug-neovim-rpc'
     Plug 'yggdroot/indentline'
     Plug 'morhetz/gruvbox'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
+"----------------------------------------------------------------------
+" plugins - vim-startify 
+"----------------------------------------------------------------------
+let g:startify_files_number = 10
+let g:startify_bookmarks = [
+    \ { 'ni': '~/.config/nvim/init.vim' },
+    \ ]
 
+let g:startify_commands = [
+    \ ':h startify-options',
+    \ ]
+
+hi StartifyFooter ctermfg = red
+let g:startify_custom_footer =
+   \ ['', "   Hello, Sherlock Holmes!", '']
