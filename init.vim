@@ -6,7 +6,7 @@ set cursorline
 syntax enable
 syntax on
 " set the colorscheme of lightline.vim
-let g:lightline = { 'colorscheme': 'one'}
+let g:lightline={ 'colorscheme': 'one'}
 " enbale deoplete
 let g:deoplete#enable_at_startup = 1
 " set the colorscheme for vim
@@ -25,15 +25,15 @@ set expandtab
 set tabstop=4
 " when you do backspace and tab, 4 spaces will be treated as a tab
 set softtabstop=4
-" tab = 4 spaces
+" tab 4 spaces
 set shiftwidth=4
 
 set sm
-set matchtime=3
 set hlsearch
+set matchtime=3
 set laststatus=2
 " set the Leader key
-let mapleader = ","
+let mapleader=","
 " key mappings
 nnoremap <Leader>w <Esc>:w<CR>
 inoremap ( ()<Esc>i
@@ -44,6 +44,7 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 nmap <Leader>t :NERDTreeToggle<CR>
 inoremap jj <Esc>
+nnoremap <Leader>ln <Esc>:Tab /=<CR>
 " configure the plugins
 call plug#begin()
     Plug 'mhinz/vim-startify'
@@ -62,6 +63,10 @@ call plug#begin()
     Plug 'yggdroot/indentline'
     Plug 'morhetz/gruvbox'
     Plug 'easymotion/vim-easymotion'
+    Plug 'itchyny/vim-cursorword'
+    Plug 'lfv89/vim-interestingwords'
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'majutsushi/tagbar'
     Plug 'ryanoasis/vim-devicons'
 call plug#end()
 "----------------------------------------------------------------------
@@ -79,3 +84,16 @@ let g:startify_commands = [
 hi StartifyFooter ctermfg = red
 let g:startify_custom_footer =
    \ ['', "   Hello, Sherlock Holmes!", '']
+"-----------------------------------------------------------------------
+" plugins - vim-autoformat
+"-----------------------------------------------------------------------
+noremap <F3> :Autoformat<CR>
+let g:formatter_yapf_style = 'pep8'
+"-----------------------------------------------------------------------
+" plugins - tagbar
+"-----------------------------------------------------------------------
+nmap <F8> :TagbarToggle<CR>
+" open preview panel
+" let g:tagbar_autopreview = 1
+" close element sort base on initial letter
+let g:tagbar_sort = 0
