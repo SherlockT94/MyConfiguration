@@ -55,7 +55,7 @@ call plug#begin()
     Plug 'godlygeek/tabular'
     Plug 'tpope/vim-surround'
     Plug 'plasticboy/vim-markdown'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+    Plug 'suan/vim-instant-markdown'
     Plug 'shougo/deoplete.nvim'
     Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'roxma/nvim-yarp'
@@ -126,8 +126,23 @@ let g:ale_linters = {
 "-----------------------------------------------------------------------
 " plugins - lightline
 "-----------------------------------------------------------------------
-" set the colorscheme of lightline.vim
+" Set the colorscheme of lightline.vim
 let g:lightline={ 'colorscheme': 'one'}
+" Set devicons for lightline
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
+      \ }
+      \ }
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 "-----------------------------------------------------------------------
 " plugins - lightline-ale
 "-----------------------------------------------------------------------
@@ -157,3 +172,7 @@ let g:lightline.active = {
       \             'linter_warnings',
       \             'linter_ok' ]] 
       \ }
+"-----------------------------------------------------------------------
+" plugins - Instant-markdown-preview
+"-----------------------------------------------------------------------
+set shell=bash\ -i
