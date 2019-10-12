@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nv="nvim"
 alias shdn="sudo shutdown -h now"
+alias ll="ls -alh"
 # test
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
