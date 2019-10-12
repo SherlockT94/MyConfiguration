@@ -81,6 +81,7 @@ let g:startify_bookmarks = [
     \ { 'ni': '~/.config/nvim/init.vim' },
     \ { 'xr': '~/.Xresources' },
     \ { 'zr': '~/.zshrc' },
+    \ { 'i3': '~/.config/i3/config' },
     \ ]
 
 let g:startify_commands = [
