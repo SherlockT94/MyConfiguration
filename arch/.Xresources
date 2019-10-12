@@ -1,0 +1,57 @@
+!! set font to monospace and set the size to 12, xft -> x font
+!! URxvt.font: xft:Source Code Pro:style=Regular:size=12
+!! URxvt.font: xft:Meslo LG S for Powerline:style=Bold:size=12
+!! URxvt.font: xft:MesloLGS Nerd Font:style=RegularForPowerline:size=12
+URxvt.font: xft:MesloLGSDZ Nerd Font:style=Bold:size=12
+!! set scroll bar invisible
+URxvt.scrollBar: false
+!! set transparency
+URxvt.transparent: True
+!! set cursor blink
+URxvt.cursorBlink: 1
+!! set some shading
+URxvt.shading: 22
+!! setting foreground
+*foreground: #c9c9c9
+*background: #282828
+!! smooth font
+Xft.antialias: True
+!! set term size
+URxvt.geometry: 87x20
+
+!! set color scheme
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+!! Extensions:
+!! No space after comma
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,xresources-256
+URxvt.colorUL: #4682B4
+!! matcher
+!! URxvt.matcher.button: 1 first mouse button
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+!! resize-font
+URxvt.keysym.C-j: resize-font:bigger
+URxvt.keysym.C-k: resize-font:smaller
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+!! keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keyboard-select.clipboard: true
