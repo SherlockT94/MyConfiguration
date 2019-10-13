@@ -80,6 +80,7 @@ let g:startify_files_number = 10
 let g:startify_bookmarks = [
     \ { 'ni': '~/.config/nvim/init.vim' },
     \ { 'xr': '~/.Xresources' },
+    \ { 'xi': '~/.xinitrc' },
     \ { 'zr': '~/.zshrc' },
     \ { 'i3': '~/.config/i3/config' },
     \ ]
