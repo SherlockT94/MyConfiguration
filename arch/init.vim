@@ -72,6 +72,7 @@ call plug#begin()
     Plug 'Chiel92/vim-autoformat'
     Plug 'majutsushi/tagbar'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'plytophogy/vim-virtualenv'
 call plug#end()
 "----------------------------------------------------------------------
 " plugins - vim-startify 
@@ -112,7 +113,7 @@ let g:tagbar_sort = 0
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
 " Customize error & warning icons
-let g:ale_sign_error = '✗'
+let g:ale_sign_error = ''
 let g:ale_sign_warning = '⚡'
 " <Leader>s toggle ALE
 nmap <Leader>s :ALEToggle<CR>
@@ -129,8 +130,13 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {
 \   'c++': ['clang'],
 \   'c': ['clang'],
-\   'python': ['pylint'],
+\   'python': ['flake8'],
 \}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black', 'isort'],
+\}
+let g:ale_fix_on_save = 1
 "-----------------------------------------------------------------------
 " plugins - lightline
 "-----------------------------------------------------------------------
@@ -183,3 +189,7 @@ let g:lightline.active = {
 " plugins - Instant-markdown-preview
 "-----------------------------------------------------------------------
 " set shell=bash\ -i
+"-----------------------------------------------------------------------
+" plugins - Vim-virtualenv
+"-----------------------------------------------------------------------
+let g:virtualenv_directory = '/home/sherlock/dj_project/'
